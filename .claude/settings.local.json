@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//e/cc/.claude/projects/e--cc-workspace-study-rl/**)",
+      "Read(//e/cc/.claude/projects/e--cc-workspace-study-rl/memory/**)",
+      "Bash(python -c \"import fitz; print\\('pymupdf ok'\\)\")",
+      "Bash(python -c \"import pdfplumber; print\\('pdfplumber ok'\\)\")",
+      "Bash(python -c \"import PyPDF2; print\\('PyPDF2 ok'\\)\")",
+      "Bash(py --version)",
+      "Bash(where pdftotext *)",
+      "Bash(where pdftoppm *)",
+      "Bash(python *)",
+      "PowerShell($p = \"e:\\\\cc_workspace\\\\study_rl\\\\参考资料\\\\_index\\\\目录.md\"; \\(Get-Item $p\\).Length; \\(Get-Content $p -Encoding utf8 | Measure-Object -Line\\).Lines)",
+      "PowerShell($p=\"e:\\\\cc_workspace\\\\study_rl\\\\参考资料\\\\_index\\\\全文.txt\"; $bytes=[System.IO.File]::ReadAllBytes\\($p\\); $nul = \\($bytes | Where-Object {$_ -eq 0}\\).Count; \"total bytes: $\\($bytes.Length\\)\"; \"NUL bytes: $nul\"; \"first3: $\\($bytes[0]\\) $\\($bytes[1]\\) $\\($bytes[2]\\)\")",
+      "PowerShell($p=\"e:\\\\cc_workspace\\\\study_rl\\\\参考资料\\\\_index\\\\全文.txt\"; $bytes=[System.IO.File]::ReadAllBytes\\($p\\); $nul=0; foreach\\($b in $bytes\\){ if\\($b -eq 0\\){$nul++} }; Write-Output \\(\"bytes=\" + $bytes.Length\\); Write-Output \\(\"nul=\" + $nul\\); Write-Output \\(\"bom=\" + $bytes[0] + \"_\" + $bytes[1] + \"_\" + $bytes[2]\\))"
+    ]
+  }
+}
