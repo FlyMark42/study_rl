@@ -1,0 +1,20 @@
+{
+  "description": "掩码SAC算法配置",
+  "fixed_parameters": {
+    "algorithm": "mask_sac",
+    "num_stocks":5,
+    "days": 10,
+    "buffer_size": 512,
+    "learning_starts": 1000,
+    "target_update_interval": 1,
+    "gradient_steps": 1,
+    "train_freq": 1,
+    "use_mask": true
+  },
+  "variable_parameters": {
+    "lr": [1e-5, 5e-5, 1e-4],
+    "batch_size": [64, 128, 256],
+    "embed_dim": [128, 256, 512],
+    "seed": [42, 123, 3407]
+  }
+}

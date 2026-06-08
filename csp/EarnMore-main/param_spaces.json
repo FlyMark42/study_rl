@@ -1,0 +1,90 @@
+{
+  "cpu_environment": {
+    "description": "CPU环境重点优化参数",
+    "priority_parameters": {
+      "lr": {
+        "type": "log-uniform",
+        "low": 1e-5,
+        "high": 1e-3,
+        "description": "学习率，对训练收敛速度影响最大"
+      },
+      "batch_size": {
+        "type": "choice",
+        "choices": [16, 32, 64],
+        "description": "批大小，影响训练稳定性和内存占用"
+      },
+      "seed": {
+        "type": "choice", 
+        "choices": [42, 123, 1234, 3407, 9999],
+        "description": "随机种子，用于评估模型稳定性"
+      }
+    },
+    "optional_parameters": {
+      "num_episodes": {
+        "type": "choice",
+        "choices": [50, 100, 200],
+        "description": "训练轮数，CPU环境建议较少"
+      }
+    }
+  },
+  "gpu_environment": {
+    "description": "GPU环境全面优化参数",
+    "priority_parameters": {
+      "lr": {
+        "type": "log-uniform",
+        "low": 1e-5,
+        "high": 1e-3,
+        "description": "学习率，对训练收敛速度影响最大"
+      },
+      "batch_size": {
+        "type": "choice",
+        "choices": [32, 64, 128, 256],
+        "description": "批大小，GPU可支持更大batch_size"
+      },
+      "embed_dim": {
+        "type": "choice",
+        "choices": [64, 128, 256, 512],
+        "description": "嵌入维度，影响模型表达能力"
+      },
+      "buffer_size": {
+        "type": "choice",
+        "choices": [4096, 8192, 16384],
+        "description": "经验回放缓冲区大小"
+      },
+      "num_episodes": {
+        "type": "choice",
+        "choices": [100, 200, 500, 1000],
+        "description": "训练轮数，GPU环境可支持更长训练"
+      },
+      "seed": {
+        "type": "choice",
+        "choices": [42, 123, 1234, 3407, 9999],
+        "description": "随机种子，用于评估模型稳定性"
+      }
+    }
+  },
+  "stability_evaluation": {
+    "description": "稳定性评估配置",
+    "min_seeds": 3,
+    "recommended_seeds": [42, 123, 3407],
+    "variance_thresholds": {
+      "low": 0.01,
+      "medium": 0.05,
+      "high": 0.1
+    }
+  },
+  "search_strategies": {
+    "random_search": {
+      "default_samples": 50,
+      "max_samples": 200,
+      "min_samples": 10
+    },
+    "bayesian_optimization": {
+      "default_iterations": 50,
+      "max_iterations": 200,
+      "min_iterations": 10,
+      "acquisition_function": "EI",
+      "n_initial_points": 10
+    }
+  }
+}

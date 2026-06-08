@@ -1,0 +1,20 @@
+{
+  "description": "DQN算法基础配置",
+  "fixed_parameters": {
+    "algorithm": "dqn",
+    "num_stocks": 28,
+    "days": 10,
+    "buffer_size": 10000,
+    "learning_starts": 1000,
+    "target_update_interval": 1000,
+    "train_freq": 4,
+    "exploration_fraction": 0.1,
+    "exploration_final_eps": 0.05
+  },
+  "variable_parameters": {
+    "lr": [1e-4, 5e-4, 1e-3],
+    "batch_size": [32, 64, 128],
+    "embed_dim": [64, 128, 256],
+    "seed": [42, 123, 3407]
+  }
+}

@@ -1,0 +1,35 @@
+最入门级别的步骤：
+g_strRoot="J:\\python_code\\stock_reinforcement\\EarnMore\\EarnMore-main"  这个变量改成你自己的项目目录
+
+1. 查看所有实验：`python experiment_manager.py list-experiments`
+
+2. 启动随机搜索：`python hyperopt.py random-search --template mask_sac_base --num-samples 2`
+
+3.初始贝叶斯优化搜索
+python hyperopt.py bayesian-search --template mask_sac_base --max-iter 2 --acquisition EI
+
+
+4.启动调度器：
+python scheduler.py run --max-concurrent 4 --max-retries 3
+
+5.实时查看状态：
+python monitor.py status --experiment exp_001_mask_sac_base_lr_6.86451896595848e-05_batch_size_128_embed_dim_256_buffer_size_16384_seed_123
+
+
+6.综合分析：
+python monitor.py comprehensive-analysis --experiment exp_001_mask_sac_base_lr_6.86451896595848e-05_batch_size_128_embed_dim_256_buffer_size_16384_seed_123
+
+
+7.批量生成所有实验图表：
+python visualizer.py plot-all-experiments --experiments-dir experiments
+生成完整对比分析
+python visualizer.py compare-experiments --experiments-dir experiments
+
+以上相当于第1次实验做完了，如果你要开展下一次，就
+
+如果你想做随机搜索
+1. 启动随机搜索：`python hyperopt.py random-search --template mask_sac_base --num-samples 2`
+
+如果你想继续贝叶斯,找一个你想继续的search-id
+1.python hyperopt.py resume-from --search-id bayesian_mask_sac_base_20251014_101712_2 --template mask_sac_base
+
