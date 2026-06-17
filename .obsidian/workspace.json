@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "33afe2a775c766e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e055ecc3a84145c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ba4fbc4a7d835b9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "式6.9推导式6.10.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "式6.9推导式6.10"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "04a10bc9f37a1941",
+    "type": "split",
+    "children": [
+      {
+        "id": "1749640ff36d5bad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "063287d4d65564e9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "85b78c41cf99465f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "5066f0f8ab0f396a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6a0c04e50bd7f22b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b154ead88861bd2e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f36d16cce9e7a9be",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "csp/解读文档_v3/03_EarnMore代码工程解析_新版.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "03_EarnMore代码工程解析_新版 的反向链接列表"
+            }
+          },
+          {
+            "id": "6b35b664d29b802b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "csp/解读文档_v3/03_EarnMore代码工程解析_新版.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "03_EarnMore代码工程解析_新版 的出链列表"
+            }
+          },
+          {
+            "id": "7029dfd4f758c693",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "af2309bd2739ff04",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "csp/解读文档_v3/03_EarnMore代码工程解析_新版.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "03_EarnMore代码工程解析_新版 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "ba4fbc4a7d835b9c",
+  "lastOpenFiles": [
+    "式6.6推导式6.8.md",
+    "6.3.1_异策略型和重要性采样_式6.13推导.md",
+    "笔记_3.4.2_Q函数贝尔曼最优方程.md",
+    "6.4_Q学习_图6.11与图6.12大小写q的区别.md",
+    "6.2.1_同策略型SARSA_式6.11解析.md",
+    "csp/解读文档_v3/04_运行调试测试指南.md",
+    "csp/解读文档_v3/EarnMore_论文中英对照.md",
+    "csp/EarnMore_一个例子讲透全文.md",
+    "csp/解读文档_v3/EarnMore_训练与推理过程示例讲解.md",
+    "csp/解读文档_v3/EarnMore_核心概念原理实验示例讲解.md",
+    "csp/解读文档_v3/EarnMore_一个例子讲透全文.md",
+    "csp/EarnMore_训练与推理过程示例讲解.md",
+    "csp/EarnMore_核心概念原理实验示例讲解.md",
+    "csp/EarnMore_一个例子讲透全文.md.tmp.2300.35cccd7f592e",
+    "csp/EarnMore_一个例子讲透全文.md.tmp.2300.32da544c4a3b",
+    "csp/解读文档_v3/03_EarnMore代码工程解析_新版.md",
+    "csp/解读文档_v3/02_强化学习知识点学习清单.md"
+  ]
+}
