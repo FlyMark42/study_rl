@@ -1,0 +1,72 @@
+(csp) root@iZ0jl1gsjul7l5feyclcx9Z:/home/csp# python tools/test.py --config configs/mask_sac_portfolio_management.py --root /home/model_data/csp
+Config (path: configs/mask_sac_portfolio_management.py): {'is_gpu_available': True, 'root': '/home/model_data/csp', 'workdir': 'workdir', 'tag': 'mask_sac', 'num_stocks': 790, 'batch_size': 32, 'buffer_size': 4096, 'horizon_len': 64, 'embed_dim': 128, 'decoder_embed_dim': 128, 'repeat_times': 128, 'days': 10, 'if_use_rep': True, 'if_use_beta': True, 'num_envs': 1, 'num_features': 67, 'temporal_dim': 3, 'if_norm': True, 'if_norm_temporal': False, 'train_start_date': '2023-01-01', 'train_end_date': '2025-03-31', 'val_start_date': '2025-04-01', 'val_end_date': '2025-09-30', 'test_start_date': '2025-09-01', 'test_end_date': '2025-09-30', 'if_use_per': False, 'save_freq': 20, 'action_wrapper_method': 'reweight', 'T': 0.01, 'n_steps_per_episode': 1024, 'num_episodes': 5, 'depth': 1, 'decoder_depth': 1, 'lr': 5e-05, 'act_lr': 5e-05, 'cri_lr': 5e-05, 'rep_lr': 5e-05, 'beta_lr': 5e-05, 'rep_loss_weight': 0.01, 'beta_loss_weight': 0.01, 'seed': 20258888, 'feature_size': (10, 67), 'patch_size': (10, 67), 'transition': ['state', 'action', 'mask', 'ids_restore', 'reward', 'done', 'next_state'], 'transition_shape': {'state': {'shape': (1, 790, 10, 67), 'type': 'float32'}, 'action': {'shape': (1, 791), 'type': 'float32'}, 'mask': {'shape': (1, 790), 'type': 'int32'}, 'ids_restore': {'shape': (1, 790), 'type': 'int64'}, 'reward': {'shape': (1,), 'type': 'float32'}, 'done': {'shape': (1,), 'type': 'float32'}, 'next_state': {'shape': (1, 790, 10, 67), 'type': 'float32'}}, 'dataset': {'type': 'PortfolioManagementDataset', 'root': None, 'data_path': 'datasets/csp_817_data_cut/features', 'stocks_path': 'datasets/csp_817_data_cut/stocks_cut.txt', 'aux_stocks_path': 'datasets/csp_817_data_cut/aux_stocks_files_cleaned', 'features_name': ['vol_price_bias_6', 'vol_up_momentum_pct', 'price_relative_pos_20d', 'vol_mom_9_26', 'price_change_rate_6', 'neg_corr_open_vol_10', 'cov_rank_high_vol_5', 'amt_1m_3m', 'cov_ret_amt', 'cov_volume_1m', 'mean_amt', 'mean_ret_amt', 'ret_amt', 'turn_1m_3m', 'turn_mean_1m', 'high60_close', 'min_low_idx_20', 'close_rank_5d', 'loss_sum_5d_ratio', 'gain_sum_5d_ratio', 'up_days_5d_ratio', 'low20_close', 'high20_close', 'sum_turnover_120d', 'avg_volume_30d_ratio', 'maxmin_time_distance_20d', 'std_turnover_30d', 'std_daily_ret_30d', 'price_range_1m', 'std_volume_30d', 'std_volume_5d', 'volume_ratio', 'turnover_rate', 'turnover_rate_30d', 'vol_active_5d', 'vol_active_30d', 'macd', 'macd_dea', 'macd_diff', 'kdj_k', 'kdj_d', 'kdj_j', 'rsi_6', 'rsi_12', 'rsi_24', 'clo_5d_60d', 'clo_maxmin_3m', 'clo_ratemean_1m', 'corr_clo_turn', 'diff', 'dist_high', 'high_low_mean', 'long_short_ema', 'max_ret_1m', 'ret_max_1m', 'ret_std_1m', 'skew_ret_1m', 'turn_cov_1m', 'open', 'high', 'low', 'close', 'vol', 'amount'], 'temporals_name': ['weekday', 'day', 'month'], 'labels_name': ['ret1', 'mov1']}, 'environment': {'type': 'EnvironmentASR', 'dataset': None, 'mode': 'train', 'if_norm': True, 'if_norm_temporal': False, 'scaler': None, 'days': 10, 'start_date': None, 'end_date': None, 'initial_amount': 10000000.0, 'transaction_cost_pct': 0.001}, 'rep_net': {'type': 'MaskTimeState', 'embed_type': 'TimesEmbed', 'feature_size': (10, 67), 'patch_size': (10, 67), 't_patch_size': 1, 'num_stocks': 790, 'pred_num_stocks': 790, 'in_chans': 1, 'input_dim': 67, 'temporal_dim': 3, 'embed_dim': 128, 'depth': 1, 'num_heads': 4, 'decoder_embed_dim': 128, 'decoder_depth': 1, 'decoder_num_heads': 8, 'mlp_ratio': 4.0, 'norm_pix_loss': False, 'cls_embed': True, 'sep_pos_embed': True, 'trunc_init': False, 'no_qkv_bias': False, 'mask_ratio_min': 0.6, 'mask_ratio_max': 0.8, 'mask_ratio_mu': 0.7, 'mask_ratio_std': 0.1}, 'act_net': {'type': 'ActorMaskSAC', 'embed_dim': 128, 'depth': 1, 'cls_embed': True}, 'cri_net': {'type': 'CriticMaskSAC', 'embed_dim': 128, 'depth': 1, 'cls_embed': True}, 'criterion': {'type': 'MSELoss', 'reduction': 'none'}, 'scheduler': {'type': 'MultiStepLRScheduler', 'multi_steps': [614400, 1024000, 1433600], 't_initial': 5120, 'decay_t': 512000, 'gamma': 0.1, 't_mul': 1.0, 'lr_min': 0.0, 'decay_rate': 1.0, 'warmup_t': 307200, 'warmup_lr_init': 1e-08, 'warmup_prefix': False, 'cycle_limit': 0, 't_in_epochs': False, 'noise_range_t': None, 'noise_pct': 0.67, 'noise_std': 1.0, 'noise_seed': 42, 'initialize': True}, 'optimizer': {'type': 'AdamW', 'params': None, 'lr': 5e-05}, 'agent': {'type': 'AgentMaskSAC', 'act_lr': 5e-05, 'cri_lr': 5e-05, 'rep_lr': 5e-05, 'beta_lr': 5e-05, 'rep_net': {'type': 'MaskTimeState', 'embed_type': 'TimesEmbed', 'feature_size': (10, 67), 'patch_size': (10, 67), 't_patch_size': 1, 'num_stocks': 790, 'pred_num_stocks': 790, 'in_chans': 1, 'input_dim': 67, 'temporal_dim': 3, 'embed_dim': 128, 'depth': 1, 'num_heads': 4, 'decoder_embed_dim': 128, 'decoder_depth': 1, 'decoder_num_heads': 8, 'mlp_ratio': 4.0, 'norm_pix_loss': False, 'cls_embed': True, 'sep_pos_embed': True, 'trunc_init': False, 'no_qkv_bias': False, 'mask_ratio_min': 0.6, 'mask_ratio_max': 0.8, 'mask_ratio_mu': 0.7, 'mask_ratio_std': 0.1}, 'act_net': {'type': 'ActorMaskSAC', 'embed_dim': 128, 'depth': 1, 'cls_embed': True}, 'cri_net': {'type': 'CriticMaskSAC', 'embed_dim': 128, 'depth': 1, 'cls_embed': True}, 'criterion': {'type': 'MSELoss', 'reduction': 'none'}, 'optimizer': {'type': 'AdamW', 'params': None, 'lr': 5e-05}, 'scheduler': {'type': 'MultiStepLRScheduler', 'multi_steps': [614400, 1024000, 1433600], 't_initial': 5120, 'decay_t': 512000, 'gamma': 0.1, 't_mul': 1.0, 'lr_min': 0.0, 'decay_rate': 1.0, 'warmup_t': 307200, 'warmup_lr_init': 1e-08, 'warmup_prefix': False, 'cycle_limit': 0, 't_in_epochs': False, 'noise_range_t': None, 'noise_pct': 0.67, 'noise_std': 1.0, 'noise_seed': 42, 'initialize': True}, 'if_use_per': False, 'if_use_rep': True, 'if_use_beta': True, 'rep_loss_weight': 0.01, 'beta_loss_weight': 0.01, 'num_envs': 1, 'transition_shape': {'state': {'shape': (1, 790, 10, 67), 'type': 'float32'}, 'action': {'shape': (1, 791), 'type': 'float32'}, 'mask': {'shape': (1, 790), 'type': 'int32'}, 'ids_restore': {'shape': (1, 790), 'type': 'int64'}, 'reward': {'shape': (1,), 'type': 'float32'}, 'done': {'shape': (1,), 'type': 'float32'}, 'next_state': {'shape': (1, 790, 10, 67), 'type': 'float32'}}, 'max_step': 10000.0, 'gamma': 0.99, 'reward_scale': 1, 'repeat_times': 128, 'batch_size': 32, 'clip_grad_norm': 3.0, 'soft_update_tau': 0.005, 'state_value_tau': 0, 'device': None, 'action_wrapper_method': 'reweight', 'T': 0.01}}
+init stocks...
+init stocks success...
+init aux stocks...
+aux stocks id: 1, name: GXHL, num stocks: 25
+init aux stocks success...
+init stocks dataframe...
+init stocks dataframe success...
+normalize datasets
+features shape (790, 541, 67), prices shape (790, 541, 4), labels shape (790, 541, 2), num days 541
+dates range: 2023-01-03 00:00:00 to 2025-03-31 00:00:00
+stock markets inferred, n_stocks=790, rebalance_period=5
+normalize datasets
+features shape (790, 22, 67), prices shape (790, 22, 4), labels shape (790, 22, 2), num days 22
+dates range: 2025-09-01 00:00:00 to 2025-09-30 00:00:00
+stock markets inferred, n_stocks=790, rebalance_period=5
+action shape (791,), action type float32, state shape (790, 10, 67), state type float32
+/root/miniconda3/envs/csp/lib/python3.8/site-packages/gym/utils/passive_env_checker.py:20: UserWarning: WARN: It seems a Box observation space is an image but the `dtype` is not `np.uint8`, actual type: float32. If the Box observation space is not an image, we recommend flattening the observation to have only a 1D vector.
+  logger.warn(
+/root/miniconda3/envs/csp/lib/python3.8/site-packages/gym/utils/passive_env_checker.py:25: UserWarning: WARN: It seems a Box observation space is an image but the upper and lower bounds are not in [0, 255]. Generally, CNN policies assume observations are within that range, so you may encounter an issue if the observation values are not.
+  logger.warn(
+action shape (791,), action type float32, state shape (790, 10, 67), state type float32
+EnvironmentASR reset, day=9, cash=10000000.00, initial_amount=10000000.0
+/root/miniconda3/envs/csp/lib/python3.8/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: WARN: The obs returned by the `reset()` method was expecting numpy array dtype to be float32, actual type: float64
+  logger.warn(
+/root/miniconda3/envs/csp/lib/python3.8/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: WARN: The obs returned by the `reset()` method is not within the observation space.
+  logger.warn(f"{pre} is not within the observation space.")
+EnvironmentASR reset, day=9, cash=10000000.00, initial_amount=10000000.0
+resume from /home/model_data/csp/workdir/best.pth
+/home/csp/pm/utils/misc.py:71: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location='cpu')
+set state dict
+set state dict success
+Loaded model from /home/model_data/csp/workdir/best.pth
+EnvironmentASR reset, day=9, cash=10000000.00, initial_amount=10000000.0
+EnvironmentASR reset, day=9, cash=10000000.00, initial_amount=10000000.0
+Rebalance day=9, capital=10091243.33, return=0.009124, cost=10942.67, cash=91613.33
+/root/miniconda3/envs/csp/lib/python3.8/site-packages/gym/utils/passive_env_checker.py:233: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  if not isinstance(terminated, (bool, np.bool8)):
+/root/miniconda3/envs/csp/lib/python3.8/site-packages/gym/utils/passive_env_checker.py:141: UserWarning: WARN: The obs returned by the `step()` method was expecting numpy array dtype to be float32, actual type: float64
+  logger.warn(
+/root/miniconda3/envs/csp/lib/python3.8/site-packages/gym/utils/passive_env_checker.py:165: UserWarning: WARN: The obs returned by the `step()` method is not within the observation space.
+  logger.warn(f"{pre} is not within the observation space.")
+Rebalance day=9, capital=9979060.47, return=-0.002094, cost=10745.53, cash=90880.47
+Rebalance day=14, capital=9578202.87, return=-0.004014, cost=97.46, cash=3360.87
+Rebalance day=14, capital=9922993.47, return=0.000000, cost=0.00, cash=90880.47
+Rebalance day=19, capital=9305424.87, return=0.005785, cost=0.00, cash=3360.87
+Rebalance day=19, capital=9756235.48, return=0.000148, cost=92.99, cash=5131.48
+EnvironmentASR reset, day=9, cash=10000000.00, initial_amount=10000000.0
+EnvironmentASR reset, day=9, cash=10000000.00, initial_amount=10000000.0
+[portfolio] glob found exp_dirs: []
+每日portfolio数据已保存到: experiments/default/logs/portfolio_daily_data.csv
+====== Test Results ======
+ARR_env0: -0.8218
+ASR_env0: -9.8114
+SR_env0: -9.6963
+CR_env0: -8.1370
+MDD_env0: -0.0855
+VOL_env0: 0.1720
+DD_env0: 0.0072
+SOR_env0: -8.9128
+IR_env0: -0.6108
+ARR_env1: -0.3917
+ASR_env1: -5.4452
+SR_env1: -5.2303
+CR_env1: -10.0448
+MDD_env1: -0.0289
+VOL_env1: 0.0921
+DD_env1: 0.0027
+SOR_env1: -5.9522
+IR_env1: -0.3295

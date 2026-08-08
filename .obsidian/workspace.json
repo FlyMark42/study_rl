@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "式6.9推导式6.10.md",
+                "file": "csp/解读文档_v3/04_运行调试测试指南.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "式6.9推导式6.10"
+              "title": "04_运行调试测试指南"
             }
           }
         ]
@@ -169,23 +169,34 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ba4fbc4a7d835b9c",
+  "active": "063287d4d65564e9",
   "lastOpenFiles": [
+    "csp/EarnMore-main_v20260617/tools/EarnMore-main/EM_original/2021_original/events.out.tfevents.1751264692.DESKTOP-MM8H4FT.150360.0",
+    "csp/EarnMore-main_v20260617/pm/net/qnet/__pycache__/__init__.cpython-38.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/qnet/__pycache__/qnet.cpython-38.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/qnet/__pycache__/__init__.cpython-310.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/qnet/__pycache__/qnet.cpython-310.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/qnet/__pycache__/mask_qnet.cpython-38.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/qnet/__pycache__/mask_qnet.cpython-310.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/TD3/__pycache__/__init__.cpython-38.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/TD3/__pycache__/TD3.cpython-38.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/TD3/__pycache__/__init__.cpython-310.pyc",
+    "csp/EarnMore-main_v20260617/pm/net/TD3/__pycache__/TD3.cpython-310.pyc",
+    "csp/解读文档_v3/05_experiments工程化工具详解.md",
+    "csp/解读文档_v3/EarnMore_核心概念原理实验示例讲解.md",
+    "csp/解读文档_v3/04_运行调试测试指南.md",
+    "csp/解读文档_v3/EarnMore_一个例子讲透全文.md",
+    "csp/解读文档_v3/EarnMore_训练与推理过程示例讲解.md",
+    "式6.9推导式6.10.md",
     "式6.6推导式6.8.md",
     "6.3.1_异策略型和重要性采样_式6.13推导.md",
     "笔记_3.4.2_Q函数贝尔曼最优方程.md",
     "6.4_Q学习_图6.11与图6.12大小写q的区别.md",
     "6.2.1_同策略型SARSA_式6.11解析.md",
-    "csp/解读文档_v3/04_运行调试测试指南.md",
     "csp/解读文档_v3/EarnMore_论文中英对照.md",
     "csp/EarnMore_一个例子讲透全文.md",
-    "csp/解读文档_v3/EarnMore_训练与推理过程示例讲解.md",
-    "csp/解读文档_v3/EarnMore_核心概念原理实验示例讲解.md",
-    "csp/解读文档_v3/EarnMore_一个例子讲透全文.md",
     "csp/EarnMore_训练与推理过程示例讲解.md",
     "csp/EarnMore_核心概念原理实验示例讲解.md",
-    "csp/EarnMore_一个例子讲透全文.md.tmp.2300.35cccd7f592e",
-    "csp/EarnMore_一个例子讲透全文.md.tmp.2300.32da544c4a3b",
     "csp/解读文档_v3/03_EarnMore代码工程解析_新版.md",
     "csp/解读文档_v3/02_强化学习知识点学习清单.md"
   ]
